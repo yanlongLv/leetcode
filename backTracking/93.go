@@ -11,7 +11,6 @@ func restoreIpAddresses(s string) []string {
 			}
 			return
 		}
-
 		for i := cur; i < len(s); i++ {
 			if isVaid(s, cur, i) {
 				s = string(s[:i+1]) + "." + string(s[i+1:])
@@ -46,5 +45,4 @@ func isVaid(s string, start, end int) bool {
 		}
 	}
 	return true
-
 }
