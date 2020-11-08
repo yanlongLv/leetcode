@@ -21,3 +21,24 @@ func convertBST(root *TreeNode) *TreeNode {
 	traversal(root)
 	return root
 }
+
+func convertBST2(root *TreeNode) *TreeNode {
+	sum := 0
+	var traversal func(root *TreeNode)
+	traversal = func(root *TreeNode) {
+		stack := []*TreeNode{}
+		for len(stack) > 0 || root != nil {
+			for root != nil {
+				stack = append(stack, root)
+				root = root.Right
+			}
+			root = stack[len(stack)-1]
+			stack = stack[:len(stack)-1]
+			sum += root.Val
+			root.Val = sum
+			root = root.Left
+		}
+	}
+	traversal(root)
+	return root
+}
