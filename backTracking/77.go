@@ -12,7 +12,7 @@ func combine(n int, k int) [][]int {
 			return
 		}
 		// 剪枝操作 n - cur + len(path) + 1 > k
-		if n-cur+len(path)+1 < k {
+		if (n - (cur - len(path)) + 1) < 0 {
 			return
 		}
 		for i := cur; i <= n; i++ {
