@@ -1,12 +1,4 @@
-package main
-
-func main() {
-}
-
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+pacakge linkList
 
 func addTwoNumbers(l1, l2 *ListNode) (head *ListNode) {
 	var tail *ListNode
