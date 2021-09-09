@@ -1,4 +1,4 @@
-pacakge linkList
+package linkList
 
 func addTwoNumbers(l1, l2 *ListNode) (head *ListNode) {
 	var tail *ListNode
