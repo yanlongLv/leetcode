@@ -1,4 +1,4 @@
-package Backtracking
+package backTracking
 
 func restoreIpAddresses(s string) []string {
 	result := []string{}

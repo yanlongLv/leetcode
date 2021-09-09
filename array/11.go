@@ -16,12 +16,12 @@ func maxArea(height []int) int {
 	return res
 }
 
-func min(x, y int) int {
-	if x > y {
-		return y
-	}
-	return x
-}
+// func min(x, y int) int {
+// 	if x > y {
+// 		return y
+// 	}
+// 	return x
+// }
 
 // func maxArea(height []int) int {
 // 	//O(n) 双指针解法。核心思想：当前的最大体积，是由边界中最小值决定的,所以优先动最小的边

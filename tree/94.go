@@ -22,15 +22,14 @@ func inorderTraversal(root *TreeNode) []int {
 	return result
 }
 
-
-func inorderTraversal(root *TreeNode) []int {
-	result:=[]int{}
-	var traversal func(root *TreeNode) 
-	traversal(root *TreeNode){
+func inorderTraversal1(root *TreeNode) []int {
+	result := []int{}
+	var traversal func(root *TreeNode)
+	traversal = func(root *TreeNode) {
 		traversal(root.Left)
-		result = append(result,root.Val)
+		result = append(result, root.Val)
 		traversal(root.Right)
 	}
 	traversal(root)
 	return result
- }
+}

@@ -1,3 +1,5 @@
+package hash
+
 func romanToInt(s string) int {
 	var roman = map[byte]int{
 		'I': 1,

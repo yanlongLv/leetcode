@@ -1,3 +1,5 @@
+package breadthFirst
+
 func findOrder(numCourses int, prerequisites [][]int) []int {
 	// 入度表和出边表
 	inDegree := make([]int, numCourses)

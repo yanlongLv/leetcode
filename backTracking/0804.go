@@ -1,6 +1,6 @@
 package backTracking
 
-func subsets(nums []int) [][]int {
+func subsets1(nums []int) [][]int {
 	result := [][]int{}
 	path := []int{}
 	var backTracking func(current int)

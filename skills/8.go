@@ -1,3 +1,7 @@
+package skills
+
+import "math"
+
 func myAtoi(str string) int {
 	n := len(str)
 	var i, j int
@@ -26,13 +30,13 @@ func myAtoi(str string) int {
 		cur := int(str[k] - '0')
 		if !neg {
 			ret = ret*10 + cur
-			if ret > int32Max {
-				return int32Max
+			if ret > math.MaxInt32 {
+				return math.MaxInt32
 			}
 		} else {
 			ret = ret*10 - cur
-			if ret < int32Min {
-				return int32Min
+			if ret < math.MaxInt32 {
+				return math.MaxInt32
 			}
 		}
 	}

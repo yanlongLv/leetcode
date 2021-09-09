@@ -1,6 +1,6 @@
 package greed
 
-func maxProfit(prices []int) int {
+func maxProfit1(prices []int) int {
 	allMaxProfit := 0
 	for i := 1; i < len(prices); i++ {
 		if prices[i]-prices[i-1] > 0 {

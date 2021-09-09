@@ -1,3 +1,5 @@
+package backTracking
+
 var solutions [][]string
 
 //没有做出来

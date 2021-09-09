@@ -1,3 +1,5 @@
+package search
+
 func searchInsert(nums []int, target int) int {
 	left := 0
 	right := len(nums)

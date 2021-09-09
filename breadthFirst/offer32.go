@@ -18,10 +18,10 @@ func levelOrder(root *TreeNode) []int {
 		for i := 0; i < length; i++ {
 			result = append(result, quene[i].Val)
 			if quene[i].Left != nil {
-				quene = append(quene, quene[i].Left)
+				//quene = append(quene, quene[i].Left)
 			}
 			if quene[i].Right != nil {
-				quene = append(quene, quene[i].Right)
+				// quene = append(quene, quene[i].Right)
 			}
 		}
 		quene = quene[length:]
