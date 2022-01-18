@@ -34,3 +34,45 @@ func reorderList(head *ListNode) {
 		right = rn
 	}
 }
+
+func middleNode(head *ListNode) *ListNode {
+	slow, fast := head, head
+	for fast.Next != nil && fast.Next.Next != nil {
+		slow = slow.Next
+		fast = fast.Next.Next
+	}
+	return slow
+}
+
+func reverseList(head *ListNode) *ListNode {
+	var prev, cur *ListNode = nil, head
+	for cur != nil {
+		nextTmp := cur.Next
+		cur.Next = prev
+		prev = cur
+		cur = nextTmp
+	}
+	return prev
+}
+
+func reorderList1(head *ListNode) {
+	if head == nil {
+		return
+	}
+	mid := middleNode(head)
+	l1 := head
+	l2 := mid.Next
+	mid.Next = nil
+	l2 = reverseList(l2)
+	mergeList(l1, l2)
+}
+
+func mergeList(left *ListNode, right *ListNode) {
+	var (
+		l1 *ListNode
+		l2 *ListNode
+	)
+	for l1 != nil && l1 != nil {
+
+	}
+}

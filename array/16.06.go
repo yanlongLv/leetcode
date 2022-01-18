@@ -11,7 +11,7 @@ func smallestDifference(a []int, b []int) int {
 	result := 0
 	i, j, result := 0, 0, math.MaxInt32
 	for i < len(a) && j < len(b) {
-		result = min(result, abs(a[i], b[j]))
+		result = min(result, diff(a[i], b[j]))
 		if a[i] > b[j] {
 			j++
 		} else {
@@ -21,7 +21,7 @@ func smallestDifference(a []int, b []int) int {
 	return result
 }
 
-func abs(x, y int) int {
+func diff(x, y int) int {
 	if x-y < 0 {
 		return y - x
 	}
